@@ -4,8 +4,13 @@ Select python programmes used to 1) calculate the short-range contributions towa
 The main subject of these programmes is the Molecules class (for processing .cell files obtained from CASTEP) and its subclass, M_Trajectory (for processing .data files obtained via ASE). Short-range interactions are treated by evaluating a fitted pair-potential for each hydrogen atom within a radius of r_c around every other hydrogen atom, however, this method has not been verified to work as of the conclusion to this project.
 
 PYTHON FILES
->potential_gradient.py: code containing simulation class, able to return all the forces and energy given a .cell file
->M_Trajectory.py: code containing simulation subclass (of Molecules() in potential_gradient.py), able to return all the forces and energy, and modify data given a .data file
->separate data.py: used to separate a single input.data file containing many structures into separate input.data files containing one structure each. Useful for M_Trajectory simulation
->fit_potentials.py: code containing many different attempts at fitting a pair-potential to the CASTEP data, for a single hydrogen molecule stretched along the x-axis
->tabulate_FE.py: given a directory containing folders containing .castep files, where each folder follows the naming convention "sep_###" (where ### is a floating point number representing the hydrogen covalent bond length), this code creates a txt file containing the atomic separation and associated Final Energy
+
+  potential_gradient.py: code containing simulation class, able to return all the forces and energy given a .cell file
+
+  M_Trajectory.py: code containing simulation subclass (of Molecules() in potential_gradient.py), able to return all the forces and energy, and modify data given a .data file
+
+  separate data.py: used to separate a single input.data file containing many structures into separate input.data files containing one structure each. Useful for M_Trajectory simulation
+
+  fit_potentials.py: code containing many different attempts at fitting a pair-potential to the CASTEP data, for a single hydrogen molecule stretched along the x-axis
+
+  tabulate_FE.py: given a directory containing folders containing .castep files, where each folder follows the naming convention "sep_###" (where ### is a floating point number representing the hydrogen covalent bond length), this code creates a txt file containing the atomic separation and associated Final Energy
